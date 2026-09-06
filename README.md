@@ -1,2 +1,18 @@
 # ASTRA_WEB
-ASTRA_WEB — Autonomous Space Task Recognition &amp; Assistance demo UI (React + TypeScript + Vite + R3F + Framer Motion). Simulation-driven, offline-first demo.
+
+ASTRA — Autonomous Space Task Recognition & Assistance
+
+Quick start:
+
+1. Extract the ZIP (or open the project folder)
+2. Run:
+
+npm install
+
+3. Run:
+
+npm run dev
+
+Open the Vite URL shown in the terminal.
+
+Demo controls are available in the Live experiment page: PLAY, PAUSE, NEXT, RESET, SIMULATE UNCERTAINTY, SIMULATE DEVIATION.

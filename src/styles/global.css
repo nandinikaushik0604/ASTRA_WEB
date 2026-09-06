@@ -1,0 +1,126 @@
+:root{
+  --kettle-black: #141214;
+  --tap-shoe: #302F33;
+  --asphalt-blue: #464C55;
+  --sea-lion: #7F8995;
+  --great-falls: #9EA7B3;
+  --ashen-whisper: #636D79;
+  --cemetery-ash: #C2C7CF;
+
+  --bg: var(--kettle-black);
+  --panel: var(--tap-shoe);
+  --muted: var(--asphalt-blue);
+  --accent: var(--sea-lion);
+  --text: var(--cemetery-ash);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.app{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  min-height:100vh;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.nav{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  color:var(--great-falls);
+}
+
+.nav a{
+  font-size:14px;
+  color:var(--great-falls);
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:2px solid transparent;
+  padding-bottom:6px;
+}
+
+.nav a.active{
+  border-bottom-color:var(--cemetery-ash);
+  color:var(--cemetery-ash);
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:1fr 640px;
+  gap:28px;
+  align-items:start;
+}
+
+.left-panel{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:24px;
+}
+
+.right-panel{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:24px;
+}
+
+.title-large{
+  font-size:48px;
+  color:var(--cemetery-ash);
+  margin:8px 0 24px 0;
+}
+
+.kv{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:8px 16px;
+  font-size:14px;
+  color:var(--great-falls);
+  margin-bottom:8px;
+}
+
+.enter-btn{
+  margin-top:18px;
+  padding:14px 20px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:transparent;
+  color:var(--cemetery-ash);
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.canvas-wrap{
+  width:100%;
+  height:640px;
+}
+
+.footer-note{
+  margin-top:12px;
+  font-size:12px;
+  color:var(--ashen-whisper);
+}
+
+@media(max-width:1200px){
+  .layout{grid-template-columns:1fr;}
+  .canvas-wrap{height:420px}
+}
